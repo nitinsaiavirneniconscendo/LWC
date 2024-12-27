@@ -1,7 +1,8 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
+import insertAccounts from "@salesforce/apex/InsertAccountDetails.insertAccounts"
 
 export default class LwcTask2 extends LightningElement {
-    Account={
+   @track Account={
         Name:"",
         Street:"",
         Country:"", 
@@ -22,6 +23,8 @@ export default class LwcTask2 extends LightningElement {
 
 
 
+
+
 }
     handleChangeDescription(event){
         this.Account.Description=event.target.value;
@@ -30,14 +33,29 @@ export default class LwcTask2 extends LightningElement {
     }
 
     handleSavebutton(){
-        console.log('Name :' + JSON.stringify(this.Account.Name));
-        console.log('Street :' + JSON.stringify(this.Account.Street));
-        console.log('City :' + JSON.stringify(this.Account.City));
-        console.log('Country :' + JSON.stringify(this.Account.Country));
-        console.log('Province :' + JSON.stringify(this.Account.Province));
-        console.log('PostalCode :' + JSON.stringify(this.Account.PostalCode));
-        console.log('Description :' + JSON.stringify(this.Account.Description));
-      
+        // console.log('Name :' + JSON.stringify(this.Account.Name));
+        // console.log('Street :' + JSON.stringify(this.Account.Street));
+        // console.log('City :' + JSON.stringify(this.Account.City));
+        // console.log('Country :' + JSON.stringify(this.Account.Country));
+        // console.log('Province :' + JSON.stringify(this.Account.Province));
+        // console.log('PostalCode :' + JSON.stringify(this.Account.PostalCode));
+        // console.log('Description :' + JSON.stringify(this.Account.Description));
+        try {
+            console.log('Save button clicked');
+             insertAccounts({
+                name: this.Account.Name,
+                street: this.Account.Street,
+                country: this.Account.Country,
+                city: this.Account.City,
+                province: this.Account.Province,
+                postalCode: this.Account.PostalCode,
+                description: this.Account.Description
+            });
+            console.log('Account inserted successfully');
+        } catch (error) {
+            console.error('Error inserting account:', error);
+        }
+
       
     }
    
