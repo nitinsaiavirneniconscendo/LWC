@@ -1,0 +1,30 @@
+.normal-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.clicked-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btnman {
+background-color: red;
+color: rgb(159, 29, 29);
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+}
+.btnman:hover {
+  background-color: rgb(0, 34, 255);
+  color: rgb(29, 66, 159);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  }

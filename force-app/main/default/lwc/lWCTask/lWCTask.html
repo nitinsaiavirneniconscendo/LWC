@@ -1,0 +1,31 @@
+<template>
+ 
+        <div >
+            <label for = 'name' >Name :</label>
+            <br>
+            <input type="text" id="name" name="name" value={name}  onchange={handleNameChange}>
+            <br>
+    
+            <label for = 'lastname'>Last Name :</label>
+            <br>
+            <input type="text" id="lastname" name="lastname" value={lastname}  onchange={handleLastNameChange}>
+            <br>
+    
+            <label for = 'email' >Email :</label>
+            <br>
+            <input type="text" id="email" name="email" value={email} onchange={handleEmailChange}>
+            <br>
+            <label for = 'phonenumber'>Phone Number :</label>
+            <br>
+            <input type="text" id="phonenumber" name="phonenumber" value={phonenumber} onchange={handlePhoneNumberChange}>
+            <br>
+    
+            <button class="btnman" onclick={handleButtonClick}>Submitt button</button>
+            
+           
+        </div>
+        
+        
+       
+
+</template>
