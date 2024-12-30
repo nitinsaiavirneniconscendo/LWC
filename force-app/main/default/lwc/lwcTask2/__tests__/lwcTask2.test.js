@@ -1,3 +1,4 @@
+import { createElement } from 'lwc';
 import LwcTask2 from 'c/lwcTask2';
 
 describe('c-lwc-task2', () => {

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Name" onchange={handleChangeName}></lightning-input>
+    
+            <lightning-input-address
+            address-label="Address"
+            street-label="Street"
+            city-label="City"
+            country-label="Country"
+            province-label="Province"
+            postal-code-label="PostalCode"
+            onchange={handleChangeAddress} ></lightning-input-address>
+    
+            <lightning-input type="text" label="Description" onchange={handleChangeDescription}></lightning-input>
+            <lightning-button  variant="brand"   class="slds-m-left_x-small" label="Save" onclick={handleSavebutton}></lightning-button>
+            <lightning-button  variant="brand"   class="slds-m-left_x-small" label="Close" onclick={handleclosebutton}></lightning-button>
+
+    
+        </div>
+    </lightning-card>
+        
+</template>

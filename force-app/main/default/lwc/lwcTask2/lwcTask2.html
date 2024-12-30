@@ -1,22 +1,16 @@
 <template>
-    <!-- Default/basic -->
-     <lightning-card>
-    <div class="slds-p-around_medium lgc-bg">
-        <lightning-input type="text" label="Name" onchange={handleChangeName}></lightning-input>
+    <lightning-card  title="Select INSERT OR UPDATE record">
+        <lightning-button label="Insert" onclick={Oninsert}></lightning-button>
+        <template if:true={btninsert}>
+        <template if:true={close1}>
+            <c-lwc-Task2a onclose={onclose1}></c-lwc-Task2a>
 
-        <lightning-input-address
-        address-label="Address"
-        street-label="Street"
-        city-label="City"
-        country-label="Country"
-        province-label="Province"
-        postal-code-label="PostalCode"
-        onchange={handleChangeAddress} ></lightning-input-address>
-
-        <lightning-input type="text" label="Description" onchange={handleChangeDescription}></lightning-input>
-        <lightning-button label="Save" onclick={handleSavebutton}></lightning-button>
-
-    </div>
-</lightning-card>
+        </template>
+        </template>
+        <lightning-button label="Update" onclick={Onupdate}></lightning-button>
+        <template if:true={btnupdate}>
+            <c-lwc-Task2b ></c-lwc-Task2b>
+        </template>
+    </lightning-card>
     
 </template>

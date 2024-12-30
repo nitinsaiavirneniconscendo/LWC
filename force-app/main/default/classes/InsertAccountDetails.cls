@@ -1,11 +1,15 @@
+@istest
 public class InsertAccountDetails {
 
     private static void listAddAccount(List<Account> accountList) {
-        try {
+   
             insert accountList;  
-        } catch (DmlException e) {
-            System.debug('Error inserting accounts: ' + e.getMessage());
-        }
+       
+    }
+    @istest
+    public static void testing(){
+        insertAccounts('name', 'street', 'country', 'city', 'province', 'postalCode', 'description');
+        system.debug('this debug ');
     }
 
     @AuraEnabled

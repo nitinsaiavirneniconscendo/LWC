@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Select and Edit Account" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <!-- Account Selection Dropdown -->
+            <lightning-combobox
+                name="accountSelector"
+                label="Select Account"
+                value={accountid}
+                placeholder="Choose an Account"
+                options={accountOptions}
+                onchange={handleAccountChange}>
+            </lightning-combobox>
+            <button onclick={clicked}></button>
+        </div>
+    </lightning-card>
+</template>
